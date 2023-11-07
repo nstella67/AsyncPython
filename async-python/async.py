@@ -12,6 +12,7 @@ async def delivery(name, mealtime):
 
 async def main():
 
+    # 동시성
     await asyncio.gather(
         delivery("A", 5),
         delivery("B", 3),
@@ -30,6 +31,13 @@ async def main():
     await delivery("B", 3)
     await delivery("C", 4)
     # await을 기점으로 동기적으로 처리
+
+    # 태스크
+    task1 = asyncio.create_task(delivery("A", 2))
+    task2 = asyncio.create_task(delivery("B", 1))
+
+    await task2
+    await task1
 
 
 if __name__ == "__main__":

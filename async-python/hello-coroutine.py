@@ -5,6 +5,7 @@ import asyncio
 
 
 async def hello_world():
+    # await print("hello world")    ::error
     print("hello world")
     return 123
 
