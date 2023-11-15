@@ -12,7 +12,7 @@ def main():
     delivery("A", 5)
     delivery("B", 3)
     delivery("C", 4)
-    # return / return None 생략
+    # return / return None 생략   # 탈출점
 
 
 # 메인루틴
